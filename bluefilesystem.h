@@ -27,14 +27,14 @@ struct blFile
     char name[BL_FILE_NAME_MAX_LEN];
 };
 
-bool32_t blGetFileInfo( const char* file, blFileInfo* info );
-bool32_t blFileModified( const char* file, blFileInfo* info );
-uint64_t blGetFileSize( const char* file );
+bool32_t blGetFileInfo( const char *file, blFileInfo *info );
+bool32_t blFileModified( const char *file, blFileInfo *info );
+uint64_t blGetFileSize( const char *file );
 
-bool32_t blGetFiles( const char* directory, blFile* files, int* max );
-bool32_t blReadFile( const char* file, blMemory* memory );
-bool32_t blReadFromFile( const char* file, blMemory* memory, int len, int offset = 0 );
-bool32_t blWriteFile( const char* file, blMemory* memory );
+bool32_t blGetFiles( const char *directory, blFile *files, int *max );
+bool32_t blReadFile( const char *file, void *memory, uint64_t *max );
+bool32_t blReadFromFile( const char *file, void *memory, int len, int offset = 0 );
+bool32_t blWriteFile( const char *file, blMemory *memory );
 
 #else // Linux
 
