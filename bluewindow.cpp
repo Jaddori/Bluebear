@@ -140,6 +140,8 @@ int blWindowRun( HINSTANCE hInstance, blWindow *window )
         window->title = "No title";
     if( window->className == NULL )
         window->className = "blWindowClassName";
+    if( window->fps <= 0 )
+        window->fps = 60;
 
     window->fullscreen = 0;
     window->prevX = window->prevY = 128;
